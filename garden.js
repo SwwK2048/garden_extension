@@ -1,6 +1,9 @@
-
+if(MyMod === undefined) var MyMod = {};
+if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
+MyMod.launch = function(){
 	init: function(){
 		Game.Notify(`Garden extension mod loaded!`,`Have fun with new variety of plants!`,[16,5]);
+		MyMod.isLoaded = 1;
 		let fakelumps=0;
 		Game.doLumps=function()
 		{
@@ -1747,7 +1750,15 @@
 		}
 	}
 		},'Farm')
-
-
-
-	},
+	},	
+}
+if(!MyMod.isLoaded){
+	if(CCSE && CCSE.isLoaded){
+		MyMod.launch();
+	}
+	else{
+		if(!CCSE) var CCSE = {};
+		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
+		CCSE.postLoadHooks.push(MyMod.launch);
+	}
+}
