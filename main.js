@@ -1,5 +1,6 @@
 Game.registerMod('garden extension', {
 	init: function(){
+		Game.Notify(`Garden extension mod loaded!`,`Have fun with new variety of plants!`,[16,5]);
 		let fakelumps=0;
 		Game.doLumps=function()
 		{
