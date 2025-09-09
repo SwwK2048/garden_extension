@@ -1,0 +1,14 @@
+{
+ "Name": "Garden_extension",
+ "ID": "garden extension",
+ "Author": "Stanisław Walczak",
+ "Description": "Did you beat Garden minigame like 100 times and don't know what do with your life anymore? I present to You garden extension with 13 new plants! Now you can torture... I mean entertain yourself even more! And best of all getting 'Seedless to nay' achievement is even more painfull... fun I mean fun!",
+ "ModVersion": 1.000,
+ "GameVersion": 2.053,
+ "Date": "24/08/2025",
+ "Dependencies": [
+  "CCSE"
+ ],
+ "Disabled": 0,
+ "Workshop": "3557100002"
+}
